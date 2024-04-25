@@ -73,6 +73,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <br>
   
 <form action="https://script.google.com/macros/s/AKfycbzZMS4SjU-i730NO8KchOTRV3Pjtj2orOhLDKJ6KvMgoAGRUknAEuMBRuwZVEFCT1hJ4w/exec" method="GET" target="_blank" >
+  <div class="form-row">
   <div class="col-md-4">
     <label for="value1" class="form-label">Student Name</label>
     <input type="text" class="form-control" id="value1" value="" required>
@@ -80,17 +81,23 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <div class="col-md-4">
     <label for="value2" class="form-label">Phone Number</label>
     <div class="input-group">
+      <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroupPrepend2">べ</span>
     </div>
     <input type="text" class="form-control" id="value2"  aria-describedby="inputGroupPrepend02" required>
    </div>
-  <div class="col-md-4">
+    </div
+  <div>
+    class="col-md-4">
     <label for="value3" class="form-label">Email Address</label>
     <div class="input-group">
-    <span class="input-group-text" id="inputGroupPrepend2">@</span>
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroupPrepend2">@</span>
     </div>
     <input type="text" class="form-control" id="value3"  aria-describedby="inputGroupPrepend2" required>
   </div>
+  </div>
+  <div class="form-row">
   <div class="col-md-4">
     <label for="value4" class="form-label">School Name</label>
     <input type="text" class="form-control" id="value4" value="" required>
@@ -110,7 +117,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <label for="value7">What Time Whould you Like:</label>
   <input type="time" id="value7" name="appt" required> 
   </div> 
-  <div class="form-group">
+  </div>
+    <div class="form-group">
     <label for="value8">What services are you interested in?</label>
     <textarea class="form-control" id="value8" rows="1"></textarea>
   </div>
