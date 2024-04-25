@@ -76,7 +76,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <div class="row g-3">
     <div class="col-md-4 ">
       <label for="value1">First name</label>
-      <input type="text" class="form-control" id="value1" placeholder="First name" value="" required>
+      <input type="text" class="form-control" id="value1" name="value1" placeholder="First name" value="" required>
     </div>
   <div class="col-md-4 ">
       <label for="value2">Phone Number</label>
@@ -84,7 +84,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend2">べ</span>
         </div>
-        <input type="text" class="form-control" id="value2" placeholder="" aria-describedby="inputGroupPrepend2" required>
+        <input type="text" class="form-control" id="value2" name="value2" placeholder="" aria-describedby="inputGroupPrepend2" required>
       </div>
     </div>
     <div class="col-md-4 ">
@@ -93,32 +93,32 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend3">@</span>
         </div>
-        <input type="text" class="form-control" id="value3" placeholder="" aria-describedby="inputGroupPrepend3" required>
+        <input type="text" class="form-control" id="value3" name="value3" placeholder="" aria-describedby="inputGroupPrepend3" required>
       </div>
     </div>
   </div>
   <div class="row g-3">
     <div class="col-md-4 ">
       <label for="value4">School Name</label>
-      <input type="text" class="form-control" id="value4" placeholder="" required>
+      <input type="text" class="form-control" id="value4"  name="value4" placeholder="" required>
     </div>
     <div class="col-md-4 ">
       <label for="value5">Class</label>
-      <input type="text" class="form-control" id="value5" placeholder="" required>
+      <input type="text" class="form-control" id="value5" name="value5" placeholder="" required>
     </div>
     <div class="col-md-4 "><label for="value6">Start</label>
-  <input id="value6" class="form-control" type="date" required/>
+  <input id="value6" class="form-control" type="date" name="value6" required/>
   <script type="text/javascript">
     $(function() {
         $('#value6').datepicker();
     });
   </script>    <label for="value7">What Time Whould you Like:</label>
-  <input type="time" id="value7" name="appt" required>   </div>
+  <input type="time" id="value7" name="value7" required>   </div>
   
   </div>
   <div class="form-group">
   <label for="value8">What services are you interested in?</label>
-    <textarea class="form-control" id="value8" rows="3"></textarea>
+    <textarea class="form-control" id="value8" name="value8" rows="3"></textarea>
   </div>
   <div class="col-12">
     <div class="form-check">
