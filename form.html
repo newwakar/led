@@ -73,67 +73,63 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <br>
 </div>
 <form action="https://script.google.com/macros/s/AKfycbzZMS4SjU-i730NO8KchOTRV3Pjtj2orOhLDKJ6KvMgoAGRUknAEuMBRuwZVEFCT1hJ4w/exec" method="GET" target="_blank" >
+<form>
   <div class="form-row">
-  <div class="col-md-4">
-    <label for="value1" class="form-label">Student Name</label>
-    <input type="text" class="form-control" id="value1" value="" required>
-  </div>
-  <div class="col-md-4">
-    <label for="value2" class="form-label">Phone Number</label>
-    <div class="input-group">
-      <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroupPrepend2">べ</span>
+    <div class="col-md-4 mb-3">
+      <label for="value1">First name</label>
+      <input type="text" class="form-control" id="value1" placeholder="First name" value="Mark" required>
     </div>
-    <input type="text" class="form-control" id="value2"  aria-describedby="inputGroupPrepend2" required>
-   </div>
-  </div>
-  <div class="col-md-4">
-    <label for="value3" class="form-label">Email Address</label>
-    <div class="input-group">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroupPrepend3">@</span>
+<div class="col-md-4 mb-3">
+      <label for="value2">Phone Number</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="value2">べ</span>
+        </div>
+        <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Username" aria-describedby="inputGroupPrepend2" required>
+      </div>
     </div>
-    <input type="text" class="form-control" id="value3"  aria-describedby="inputGroupPrepend3" required>
+    <div class="col-md-4 mb-3">
+      <label for="value3">Email Address</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="value3">@</span>
+        </div>
+        <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Username" aria-describedby="inputGroupPrepend2" required>
+      </div>
+    </div>
   </div>
-  </div>
-  </div>
-  
   <div class="form-row">
-  <div class="col-md-4">
-    <label for="value4" class="form-label">School Name</label>
-    <input type="text" class="form-control" id="value4" value="" required>
-  </div>
-  <div class="col-md-4">
-    <label for="value5" class="form-label">Class</label>
-    <input type="text" class="form-control" id="value5" value="" required>
-  </div>
-  <div class="col-md-4">
-  <label for="value6">Start</label>
+    <div class="col-md-6 mb-3">
+      <label for="value4">School Name</label>
+      <input type="text" class="form-control" id="value4" placeholder="City" required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="value5">Class</label>
+      <input type="text" class="form-control" id="value5" placeholder="State" required>
+    </div>
+    <div class="col-md-3 mb-3"><label for="value6">Start</label>
   <input id="value6" class="form-control" type="date" required/>
   <script type="text/javascript">
     $(function() {
         $('#value6').datepicker();
     });
-  </script>
-  <label for="value7">What Time Whould you Like:</label>
-  <input type="time" id="value7" name="appt" required> 
-  </div> 
+  </script>    <label for="value7">What Time Whould you Like:</label>
+  <input type="time" id="value7" name="appt" required>   </div>
+  
   </div>
-    <div class="form-group">
-    <label for="value8">What services are you interested in?</label>
+  <div class="form-group">
+  <label for="value8">What services are you interested in?</label>
     <textarea class="form-control" id="value8" rows="1"></textarea>
   </div>
   <div class="col-12">
-  <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="" required>
-  <label class="form-check-label" for="invalidCheck2">
-   Would you like to be notified about promotional services?
-  </label>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+      <label class="form-check-label" for="invalidCheck2">
+        Would you like to be notified about promotional services?
+      </label>
+    </div>
   </div>
-  </div>
-  <div class="col-12">
   <button class="btn btn-primary" type="submit">Submit form</button>
-  </div>
 </form>
 
 
