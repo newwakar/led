@@ -1,11 +1,9 @@
 <script src="https://cdn.jsdelivr.net/npm/rss-parser@3.13.0/dist/rss-parser.min.js"></script>
 <script>
 // Note: some RSS feeds can't be loaded in the browser due to CORS security.
-// To get around this, you can use a proxy.
-const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
-
+// To get around this, you can use a.
 let parser = new RSSParser();
-parser.parseURL(CORS_PROXY + 'https://www.reddit.com/.rss', function(err, feed) {
+parser.parseURL('https://www.reddit.com/.rss', function(err, feed) {
   if (err) throw err;
   console.log(feed.title);
   feed.items.forEach(function(entry) {
