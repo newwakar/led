@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>India News</title>
-  <script src="https://cdn.jsdelivr.net/npm/rss-parser@3.13.0/dist/rss-parser.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <style>
     /* Add basic styling for a clean presentation (optional) */
     body {
@@ -29,32 +29,33 @@
   <div id="news"></div>
 
   <script>
-    (async () => {
-      const url = 'https://news.google.com/rss/search?q=india&hl=en-IN&ceid=IN:en'; // Indian news in English
-      const parser = new RSSParser();
+    $(document).ready(function() {
+      const newsUrl = '/india-news'; // Replace with your server-side endpoint URL
 
-      try {
-        const feed = await parser.parseURL(url);
-        const news = feed.items;
+      $.ajax({
+        url: newsUrl,
+        dataType: 'json',
+        success: function(data) {
+          const newsContainer = $('#news');
 
-        const newsContainer = document.getElementById('news');
+          data.slice(0, 10).forEach(item => { // Limit to 10 news items
+            const newsItem = document.createElement('div');
+            newsItem.classList.add('news-item');
 
-        news.slice(0, 10).forEach(item => { // Limit to 10 news items
-          const newsItem = document.createElement('div');
-          newsItem.classList.add('news-item');
+            const titleLink = document.createElement('a');
+            titleLink.href = item.link; // Assuming "link" property exists in the data
+            titleLink.textContent = item.title; // Assuming "title" property exists
 
-          const titleLink = document.createElement('a'); 
-          titleLink.href = item.link;
-          titleLink.textContent = item.title;
-
-          newsItem.appendChild(titleLink);
-          newsContainer.appendChild(newsItem);
-        });
-      } catch (error) {
-        console.error('Error fetching news:', error);
-        newsContainer.innerHTML = '<p>An error occurred while fetching news.</p>';
-      }
-    })();
+            newsItem.appendChild(titleLink);
+            newsContainer.appendChild(newsItem);
+          });
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          console.error('Error fetching news:', errorThrown);
+          newsContainer.innerHTML = '<p>An error occurred while fetching news.</p>';
+        }
+      });
+    });
   </script>
 </body>
 </html>
