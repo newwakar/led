@@ -5,7 +5,7 @@
 // To get around this, you can use a proxy.
 
 let parser = new RSSParser();
-parser.parseURL( 'https://www.reddit.com/.rss', function(err, feed) {
+parser.parseURL( 'https://rss.app/rss-feed?topicId=world-news', function(err, feed) {
   if (err) throw err;
   console.log(feed.title);
   feed.items.forEach(function(entry) {
