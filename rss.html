@@ -29,33 +29,21 @@
   <h1>India News</h1>
   <div id="news"></div>
 
-  <script>
-    (async () => {
-      const url = 'https://www.yovizag.com/feed/'; // Indian news in English
-      const parser = new RSSParser();
+<script>
 
-      try {
-        const feed = await parser.parseURL(url);
-        const news = feed.items;
+// Note: some RSS feeds can't be loaded in the browser due to CORS security.
+// To get around this, you can use a proxy.
+const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
 
-        const newsContainer = document.getElementById('news');
+let parser = new RSSParser();
+parser.parseURL(CORS_PROXY + 'https://www.reddit.com/.rss', function(err, feed) {
+  if (err) throw err;
+  console.log(feed.title);
+  feed.items.forEach(function(entry) {
+    console.log(entry.title + ':' + entry.link);
+  })
+})
 
-        news.slice(0, 10).forEach(item => { // Limit to 10 news items
-          const newsItem = document.createElement('div');
-          newsItem.classList.add('news-item');
-
-          const titleLink = document.createElement('a');
-          titleLink.href = item.link;
-          titleLink.textContent = item.title;
-
-          newsItem.appendChild(titleLink);
-          newsContainer.appendChild(newsItem);
-        });
-      } catch (error) {
-        console.error('Error fetching news:', error);
-        newsContainer.innerHTML = '<p>An error occurred while fetching news.</p>';
-      }
-    })();
-  </script>
+</script>
 </body>
 </html>
