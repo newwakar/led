@@ -1,49 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>India News</title>
-  <script src="https://cdn.jsdelivr.net/npm/rss-parser@3.13.0/dist/rss-parser.min.js"></script>
-  <style>
-    /* Add basic styling for a clean presentation (optional) */
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
-    .news-item {
-      margin-bottom: 15px;
-    }
-    .news-item a {
-      text-decoration: none;
-      color: black;
-    }
-    .news-item a:hover {
-      color: #666;
-    }
-  </style>
-</head>
+  <link rel="stylesheet" href="style.css"> </head>
 <body>
-  <h1>India New</h1>
+  <h1>India News</h1>
   <div id="news"></div>
 
-<script>
-
-// Note: some RSS feeds can't be loaded in the browser due to CORS security.
-// To get around this, you can use a proxy.
-const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
-
-let parser = new RSSParser();
-parser.parseURL(CORS_PROXY + 'https://www.reddit.com/.rss', function(err, feed) {
-  if (err) throw err;
-  console.log(feed.title);
-  feed.items.forEach(function(entry) {
-    console.log(entry.title + ':' + entry.link);
-  })
-})
-
-</script>
-</body>
+  <script src="script.js"></script> </body>
 </html>
