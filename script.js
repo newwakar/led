@@ -1,4 +1,4 @@
-const newsUrl = 'https://safe-weasel-54.deno.dev:3000/india-news'; // Replace with your actual server endpoint URL
+const newsUrl = 'https://safe-weasel-54.deno.dev:80/india-news'; // Replace with your actual server endpoint URL
 
 const fetchNews = async () => {
   try {
